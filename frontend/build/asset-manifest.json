@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EnviroMap/static/css/main.da414e80.css",
+    "main.js": "/EnviroMap/static/js/main.79d7ec7d.js",
+    "static/js/787.9e9f4ffd.chunk.js": "/EnviroMap/static/js/787.9e9f4ffd.chunk.js",
+    "index.html": "/EnviroMap/index.html",
+    "main.da414e80.css.map": "/EnviroMap/static/css/main.da414e80.css.map",
+    "main.79d7ec7d.js.map": "/EnviroMap/static/js/main.79d7ec7d.js.map",
+    "787.9e9f4ffd.chunk.js.map": "/EnviroMap/static/js/787.9e9f4ffd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da414e80.css",
+    "static/js/main.79d7ec7d.js"
+  ]
+}
