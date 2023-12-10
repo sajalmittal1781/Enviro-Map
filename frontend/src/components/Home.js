@@ -15,7 +15,7 @@ const Home = () => {
     useEffect(() => {
         const fetchCities = async () => {
             try {
-                const response = await axios.get('https://weather-et1t.onrender.com/cities'); 
+                const response = await axios.get('https://weather-et1t.onrender.com/cities');
                 setCities(response.data);
             } catch (error) {
                 console.error('Error fetching cities:', error);
@@ -54,7 +54,7 @@ const Home = () => {
 
         const intervalId = setInterval(() => {
             fetchDataForCities();
-        }, 1 * 60 * 1000);  // 1 minute
+        }, 1 * 60 * 1000); // 1 minute
 
         return () => clearInterval(intervalId);
     }, [cities, data]);
@@ -70,7 +70,7 @@ const Home = () => {
     });
 
     const mapboxUrl =
-        'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}';
+        'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}@2x?access_token={accessToken}';
 
     const handleLogout = async () => {
         try {
@@ -84,8 +84,16 @@ const Home = () => {
     return (
         <div className="min-h-screen flex flex-col bg-gray-100">
             <header className="bg-gray-600 text-white p-4 flex justify-between items-center">
-                <h1 className="text-3xl font-extrabold">EnviroMap</h1>
-                <div className="flex items-center">
+                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold">EnviroMap</h1>
+                <div className="lg:hidden">
+                    <button
+                        onClick={handleLogout}
+                        className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white"
+                    >
+                        Logout
+                    </button>
+                </div>
+                <div className="hidden lg:flex items-center">
                     <button
                         onClick={handleLogout}
                         className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white mr-4"
@@ -105,7 +113,7 @@ const Home = () => {
                         />
                         {Object.values(data).map((item, index) => (
                             <Marker key={index} position={[item.coord.lat, item.coord.lon]} icon={customIcon}>
-                                <Popup className="text-center p-4">
+                                <Popup className="text-center p-4" maxWidth="300">
                                     <h2 className="text-xl font-bold mb-2">{item.name}</h2>
                                     <p className="text-gray-700 mb-2">Temperature: {item.main.temp}°C</p>
                                     <p className="text-gray-700">Humidity: {item.main.humidity}%</p>
@@ -120,3 +128,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
