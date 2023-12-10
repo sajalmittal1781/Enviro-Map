@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +9,7 @@
     "axios": "^1.6.2",
     "dotenv": "^16.3.1",
     "firebase": "^10.7.1",
+    "framer-motion": "^10.16.16",
     "gh-pages": "^6.1.0",
     "leaflet": "^1.9.4",
     "leaflet-timedimension": "^1.1.1",
