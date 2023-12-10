@@ -1,4 +1,4 @@
-# Access Live Site Here : https://sajalmittal1781.github.io/EnviroMap/
+# Access Live Site Here : 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
